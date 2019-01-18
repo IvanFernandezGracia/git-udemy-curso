@@ -6,4 +6,6 @@
 5. Investigar los trabajos del Joker
 6. Tratar de investigar que trama el Flash Reverso
 7. Potenciar los superpoderes.
-8.- Investigar los planes de Deadshot
+8. Investigar los planes de Deadshot
+
+Probando rebase edit
