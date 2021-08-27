@@ -1,9 +1,7 @@
 ## NOTAS:
 Este es el README del proyecto demo-01conflicto
 concflicto
-master conclito para branch 222
-2do master conclito para branch 222
-
+comit remoto 2222
 Este es el README del proyecto demo-01
 cambio para comprobar stash y rebase
-branche 2222 local 
+conflito 2222 remoto
