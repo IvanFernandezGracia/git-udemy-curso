@@ -22,6 +22,7 @@ Temas como el **Stash, Rebase, Pull Request, Fork, Cloning Reflog** y otros, son
     <tr>
       <th align="center">Name</th>
       <th align="center">Skills</th>
+           <th align="center">Skills</th>
     </tr>
     <tr>
       <td align="center">Git + Github</td>
