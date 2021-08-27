@@ -22,7 +22,8 @@ Temas como el **Stash, Rebase, Pull Request, Fork, Cloning Reflog** y otros, son
     <tr>
       <th align="center">Name</th>
       <th align="center">Skills</th>
-           <th align="center">Skills</th>
+      <th align="center">Git</th>
+      <th align="center">GitHub</th>
     </tr>
     <tr>
       <td align="center">Git + Github</td>
@@ -40,10 +41,10 @@ Temas como el **Stash, Rebase, Pull Request, Fork, Cloning Reflog** y otros, son
            <li> Teams y sus restricciones   </li>
            <li> Organizaciones y Equipos   </li>
            <li> Legacy, ajustes y seguridad</li>
-                    <li> Gists</li>
+           <li> Gists</li>
         </ul>
       </td>
-           <td>
+         <td>
         <ul>
          <li> Primeros comandos - git config - git help </li>
          <li> Iniciando un proyecto y creando nuestro repositorio </li>
@@ -67,7 +68,11 @@ Temas como el **Stash, Rebase, Pull Request, Fork, Cloning Reflog** y otros, son
          <li> Rebase - Squash </li>
          <li> Rebase - Reword </li>
          <li> Rebase - edit </li>
-         <li>  **GitHub** Remote - Push  Pull </li>         
+        </ul>
+     </td>
+      <td>
+        <ul>
+         <li> Remote - Push  Pull </li>         
           <li> Creando una cuenta en GitHub </li>
          <li> Push a GitHub </li>
          <li> Push de los Tags de nuestro repositorio </li>
@@ -101,7 +106,6 @@ Temas como el **Stash, Rebase, Pull Request, Fork, Cloning Reflog** y otros, son
         </ul>
       </td>
     </tr>
-    <tr>
   </tbody>
 </table>
  
