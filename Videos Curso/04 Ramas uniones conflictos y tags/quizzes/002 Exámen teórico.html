@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>002 Exámen teórico</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 8, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1424014, "assessment_type": "multiple-choice", "created": "2017-07-06T22:22:47Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["<p>Verdadero</p>", "<p>Falso</p>"], "question": "<p>¿Una rama se puede definir como una linea del tiempo de commits?</p>"}, "correct_response": ["a"], "updated": "2017-07-06T22:22:47Z", "section": "", "question_plain": "¿Una rama se puede definir como una linea del tiempo de commits?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424016, "assessment_type": "multiple-choice", "created": "2017-07-06T22:23:07Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["<p>Verdadero</p>", "<p>Falso</p>"], "question": "<p>¿El <code>master </code>  es un rama?</p>"}, "correct_response": ["a"], "updated": "2017-07-06T22:23:07Z", "section": "", "question_plain": "¿El master   es un rama?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424018, "assessment_type": "multiple-choice", "created": "2017-07-06T22:24:06Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["Todas pueden unirse, pero en la realidad no todas lo harán. (pregunta de trampa)", ""], "answers": ["<p>Verdadero</p>", "<p>Falso</p>"], "question": "<p>¿Todas las ramas pueden unirse al master?</p>"}, "correct_response": ["a"], "updated": "2017-07-06T22:24:06Z", "section": "", "question_plain": "¿Todas las ramas pueden unirse al master?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424020, "assessment_type": "multiple-choice", "created": "2017-07-06T22:24:42Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", ""], "answers": ["<p>Verdadero</p>", "<p>Falso</p>"], "question": "<p>¿El merge, es la unión de dos ramas?</p>"}, "correct_response": ["a"], "updated": "2017-07-06T22:24:42Z", "section": "", "question_plain": "¿El merge, es la unión de dos ramas?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424022, "assessment_type": "multiple-choice", "created": "2017-07-06T22:27:35Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["Si, pero no es la respuesta correcta", "", ""], "answers": ["<p>Todo se realizó correctamente en el merge.</p>", "<p>Tenemos que mover el puntero del HEAD porque ya no se encuentra actualizado.</p>", "<p>Unió sin problemas ya que no existían commits en la rama a la cual unimos los cambios.</p>"], "question": "<p>Cuando aparece la palabra <code>Fast Forward</code>  después de un merge, ¿Qué significa?</p>"}, "correct_response": ["c"], "updated": "2017-07-06T22:27:35Z", "section": "", "question_plain": "Cuando aparece la palabra Fast Forward  después de un merge, ¿Qué significa?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424024, "assessment_type": "multiple-choice", "created": "2017-07-06T22:29:06Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["Intentará hacerlo, pero si detecta conflictos, nos pedirá que los corrijamos.", ""], "answers": ["<p>Verdadero</p>", "<p>Falso</p>"], "question": "<p>En un merge, ¿Git siempre intentará resolver los merge de forma automática?</p>"}, "correct_response": ["a"], "updated": "2017-07-06T22:29:06Z", "section": "", "question_plain": "En un merge, ¿Git siempre intentará resolver los merge de forma automática?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424026, "assessment_type": "multiple-choice", "created": "2017-07-06T22:33:01Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", ""], "answers": ["<p>Se desconoce el tipo de archivo Historia.md</p>", "<p>El archivo historia.md, actualmente no se le esta dando un seguimiento en el repositorio</p>", "<p>El archivo historia.md es de otra rama y no hemos realizado un merge</p>"], "question": "<p>¿Qué significa el siguiente mensaje en consola?</p><img src=\"https://udemy-images.s3.amazonaws.com:443/redactor/raw/2017-07-06_22-31-49-bc782434be222645df20e6d41841a3b2.png\">"}, "correct_response": ["b"], "updated": "2017-07-06T22:33:01Z", "section": "", "question_plain": "¿Qué significa el siguiente mensaje en consola?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424028, "assessment_type": "multiple-choice", "created": "2017-07-06T22:34:09Z", "prompt": {"relatedLectureIds": "", "feedbacks": ["", "", "", ""], "answers": ["<p>git checkout</p>", "<p>git checkout -b</p>", "<p>git branch rama</p>", "<p>git branch -ab nombre-rama</p>"], "question": "<p>¿Cómo creamos una nueva rama?</p>"}, "correct_response": ["c"], "updated": "2017-07-06T22:34:09Z", "section": "", "question_plain": "¿Cómo creamos una nueva rama?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>
