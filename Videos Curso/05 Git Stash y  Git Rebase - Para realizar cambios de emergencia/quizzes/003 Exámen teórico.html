@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>003 Exámen teórico</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1424032, "assessment_type": "multiple-choice", "created": "2017-07-06T22:38:43Z", "prompt": {"feedbacks": ["", "", ""], "question": "<p>¿Para qué sirve el stash?</p>", "relatedLectureIds": "", "answers": ["<p>Para fusionar los cambios inmediatamente con la rama master</p>", "<p>Sirve para colocar el trabajo actual, en un espacio temporal para posteriormente retomarlo</p>", "<p>Sirve guardar los cambios de la rama, y regresar al master para continuar los cambios desde el último commit</p>"]}, "correct_response": ["b"], "updated": "2017-07-06T22:38:43Z", "section": "", "question_plain": "¿Para qué sirve el stash?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424034, "assessment_type": "multiple-choice", "created": "2017-07-06T22:40:22Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>¿Qué significa WIP cuando realizamos un <code>git stash</code> ?</p>", "relatedLectureIds": "", "answers": ["<p>Work inside progress</p>", "<p>Work in progress</p>", "<p>Wait in process</p>", "<p>Work in process</p>"]}, "correct_response": ["b"], "updated": "2017-07-06T22:40:22Z", "section": "", "question_plain": "¿Qué significa WIP cuando realizamos un git stash ?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424036, "assessment_type": "multiple-choice", "created": "2017-07-06T22:41:15Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>¿Cómo puedo ver todos los trabajos pendientes en el stash?</p>", "relatedLectureIds": "", "answers": ["<p>git stash list</p>", "<p>git stash -o</p>", "<p>git stash all</p>", "<p>git stash</p>"]}, "correct_response": ["a"], "updated": "2017-07-06T22:41:15Z", "section": "", "question_plain": "¿Cómo puedo ver todos los trabajos pendientes en el stash?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424038, "assessment_type": "multiple-choice", "created": "2017-07-06T22:42:06Z", "prompt": {"feedbacks": ["", "", "", ""], "question": "<p>¿Cómo puedo recuperar el trabajo del stash?</p>", "relatedLectureIds": "", "answers": ["<p>git stash pop</p>", "<p>git stash recover</p>", "<p>git stash</p>", "<p>git stash drop</p>"]}, "correct_response": ["a"], "updated": "2017-07-06T22:42:06Z", "section": "", "question_plain": "¿Cómo puedo recuperar el trabajo del stash?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424040, "assessment_type": "multiple-choice", "created": "2017-07-06T22:42:54Z", "prompt": {"feedbacks": ["", ""], "question": "<p>Cuando recuperamos un trabajo del stash, ¿Es posible caer en conflictos?</p>", "relatedLectureIds": "", "answers": ["<p>Verdadero</p>", "<p>Falso</p>"]}, "correct_response": ["a"], "updated": "2017-07-06T22:42:54Z", "section": "", "question_plain": "Cuando recuperamos un trabajo del stash, ¿Es posible caer en conflictos?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424044, "assessment_type": "multiple-choice", "created": "2017-07-06T22:46:16Z", "prompt": {"feedbacks": ["", ""], "question": "<p>¿El git rebase, nos puede servir para actualizar el punto de separación de una rama?</p>", "relatedLectureIds": "", "answers": ["<p>Verdadero</p>", "<p>Falso</p>"]}, "correct_response": ["a"], "updated": "2017-07-06T22:46:16Z", "section": "", "question_plain": "¿El git rebase, nos puede servir para actualizar el punto de separación de una rama?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424046, "assessment_type": "multiple-choice", "created": "2017-07-06T22:47:26Z", "prompt": {"feedbacks": ["", "", "", "", ""], "question": "<p>¿Qué puede hacer un rebase interactivo?</p>", "relatedLectureIds": "", "answers": ["<p>Puede unir dos o más commits en un único commit</p>", "<p>Puede re-ordenar commits</p>", "<p>Corregir mensajes de commits</p>", "<p>Para separar commits</p>", "<p>Todas las anteriores</p>"]}, "correct_response": ["e"], "updated": "2017-07-06T22:47:26Z", "section": "", "question_plain": "¿Qué puede hacer un rebase interactivo?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>
