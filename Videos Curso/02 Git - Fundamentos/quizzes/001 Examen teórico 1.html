@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>001 Examen teórico 1</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 7, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1423860, "assessment_type": "multiple-choice", "created": "2017-07-06T21:43:29Z", "prompt": {"question": "<p>Cuando utilizamos Git, ¿Todos los miembros del equipo tienen una copia del repositorio cental?</p>", "feedbacks": ["", ""], "answers": ["<p>Verdadero</p>", "<p>Falso</p>"], "relatedLectureIds": ""}, "correct_response": ["a"], "updated": "2017-07-06T21:43:29Z", "section": "", "question_plain": "Cuando utilizamos Git, ¿Todos los miembros del equipo tienen una copia del repositorio cental?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1423864, "assessment_type": "multiple-choice", "created": "2017-07-06T21:44:18Z", "prompt": {"feedbacks": ["", ""], "question": "<p>¿Un commit en Git, es como una fotografía del proyecto en ese momento?</p>", "relatedLectureIds": "", "answers": ["<p>Verdadero</p>", "<p>Falso</p>"]}, "correct_response": ["a"], "updated": "2017-07-06T21:44:18Z", "section": "", "question_plain": "¿Un commit en Git, es como una fotografía del proyecto en ese momento?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1423868, "assessment_type": "multiple-choice", "created": "2017-07-06T21:46:48Z", "prompt": {"question": "<p>¿Para qué sirve el comando <code>git init</code> ?</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["<p>Para configurar nuestro usuario y contraseña</p>", "<p>Para inicializar el repositorio</p>", "<p>Para iniciar el seguimiento de los archivos</p>"]}, "correct_response": ["b"], "updated": "2017-07-06T21:46:48Z", "section": "", "question_plain": "¿Para qué sirve el comando git init ?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1423870, "assessment_type": "multiple-choice", "created": "2017-07-06T21:47:49Z", "prompt": {"question": "<p>Localmente, ¿Dónde se encuentra la carpeta que permite controlar todo nuestro repositorio de git?</p>", "feedbacks": ["", "", ""], "answers": ["<p>En la carpeta git</p>", "<p>En la carpeta git-config</p>", "<p>En la carpeta .git</p>"], "relatedLectureIds": ""}, "correct_response": ["c"], "updated": "2017-07-06T21:47:49Z", "section": "", "question_plain": "Localmente, ¿Dónde se encuentra la carpeta que permite controlar todo nuestro repositorio de git?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1423872, "assessment_type": "multiple-choice", "created": "2017-07-06T21:48:52Z", "prompt": {"question": "<p>Si queremos eliminar git de nuestro repositorio, ¿qué debemos hacer?</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["<p>Borrar la carpeta .git</p>", "<p>Ejecutar el comando git destroy</p>", "<p>Copiar el folder a otro directorio</p>"]}, "correct_response": ["a"], "updated": "2017-07-06T21:48:52Z", "section": "", "question_plain": "Si queremos eliminar git de nuestro repositorio, ¿qué debemos hacer?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1423876, "assessment_type": "multiple-choice", "created": "2017-07-06T21:51:00Z", "prompt": {"question": "<p>¿Qué es el stage o el escenario?</p>", "feedbacks": ["", "", ""], "relatedLectureIds": "", "answers": ["<p>Un lugar donde se muestra toda la información del commit</p>", "<p>El lugar donde podemos ver todos los archivos de nuestro repositorio</p>", "<p>Es un lugar donde podemos confirmar los archivos y carpetas que conformarán el commit</p>"]}, "correct_response": ["c"], "updated": "2017-07-06T21:51:00Z", "section": "", "question_plain": "¿Qué es el stage o el escenario?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1424030, "assessment_type": "multiple-choice", "created": "2017-07-06T22:35:16Z", "prompt": {"feedbacks": ["No existe, es un alias que nosotros creamos para simplificar el git status", ""], "question": "<p>El comando <code>git s</code> , ¿Es propio de Git?</p>", "relatedLectureIds": "", "answers": ["<p>Verdadero</p>", "<p>Falso</p>"]}, "correct_response": ["b"], "updated": "2017-07-14T21:26:28Z", "section": "", "question_plain": "El comando git s , ¿Es propio de Git?", "related_lectures": [], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>
