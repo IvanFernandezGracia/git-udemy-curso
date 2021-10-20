@@ -126,3 +126,12 @@ Temas como el **Stash, Rebase, Pull Request, Fork, Cloning Reflog** y otros, son
 
 [ir a la imagen](https://www.enriquedans.com/wp-content/uploads/2018/06/GitHub-Octocat.jpg)
 
+
+<!-- CONTACT -->
+<a name="conta"></a>
+## Contact
+Ivan Alejandro Fernandez Gracia  
+:email: ivan.fernandez.g@usach.cl  
+:telephone_receiver: +56-961214718  
+Mechanical Engineering  
+Universidad de Santiago de Chile
